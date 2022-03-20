@@ -40,18 +40,35 @@ console.log(personalMovieDB);
 // while (i<2) {
 //     const lastWathingFilm = prompt("Один из последних просмотренных фильмов?","");
 //     const raitOfFilm = +prompt("Насколько оцените его?","");
-//     personalMovieDB.movies[lastWathingFilm] = raitOfFilm;
+//     if (lastWathingFilm != '' && lastWathingFilm != null && lastWathingFilm.length <10 &&
+//         raitOfFilm != '' && raitOfFilm != null) {
+//         personalMovieDB.movies[lastWathingFilm] = raitOfFilm;
+//         console.log('done');
+//     } else {
+//         console.log('error');
+//         i--;
+//     }
 //     i++;
 // }
+// console.log(personalMovieDB);
+
 
 // let i = 0;
 // do {
 //     const lastWathingFilm = prompt("Один из последних просмотренных фильмов?","");
 //     const raitOfFilm = +prompt("Насколько оцените его?","");
-//     personalMovieDB.movies[lastWathingFilm] = raitOfFilm;
+//     if (lastWathingFilm != '' && lastWathingFilm != null && lastWathingFilm.length <10 &&
+//         raitOfFilm != '' && raitOfFilm != null) {
+//         personalMovieDB.movies[lastWathingFilm] = raitOfFilm;
+//         console.log('done');
+//     } else {
+//         console.log('error');
+//         i--;
+//     }
 //     i++;
 // }
 // while (i<2);
+// console.log(personalMovieDB);
 
 
 
