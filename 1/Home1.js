@@ -1,15 +1,23 @@
-// const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?','');
-
-// console.log(`Пользователь посмотрел ${numberOfFilms} фильмов`); 
+// const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
 
 // const personalMovieDB = {
 //     count: numberOfFilms,
 //     movies: {},
 //     actors: {},
 //     genres: [],
-//     privat: Boolean(false)
-//  };
+//     privat: false
+// };
 
+// const lastWathingFilm1 = prompt("Один из последних просмотренных фильмов?","");
+// const raitOfFilm1 = +prompt("Насколько оцените его?","");
+
+// const lastWathingFilm2 = prompt("Один из последних просмотренных фильмов?","");
+// const raitOfFilm2 = +prompt("Насколько оцените его?","");
+
+// personalMovieDB.movies[lastWathingFilm1] = raitOfFilm1;
+// personalMovieDB.movies[lastWathingFilm2] = raitOfFilm2;
+
+// console.log(personalMovieDB);
 
 
 
@@ -40,23 +48,62 @@
 
 
 
-const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
 
-const lastWathingFilm1 = prompt("Один из последних просмотренных фильмов?","");
-const raitOfFilm1 = +prompt("Насколько оцените его?","");
 
-const lastWathingFilm2 = prompt("Один из последних просмотренных фильмов?","");
-const raitOfFilm2 = +prompt("Насколько оцените его?","");
+// условия
 
-personalMovieDB.movies[lastWathingFilm1] = raitOfFilm1;
-personalMovieDB.movies[lastWathingFilm2] = raitOfFilm2;
+// const num = 500;
 
-console.log(personalMovieDB);
+// if (num == 45) {
+//     console.log('Not Ok!');
+// } else if (num == 50) {
+//     console.log('Ok!');
+// } else {
+//     console.log('not');
+// } 
+
+// num == 50 ? console.log('good') : console.log('Not good')
+
+
+// switch (num) {
+//      case 49:
+//          console.log('net');
+//          break;
+//      case 50:
+//         console.log('da');
+//         break;
+//      case 500:
+//         console.log('net500');
+//         break;
+// }
+
+
+
+// циклы
+
+// let num = 50;
+
+// while (num <= 55) {
+//     console.log(num);
+//     num++;
+// }
+
+// do {
+//     console.log(num);
+//     num++;
+// }
+// while (num <= 55);
+
+// for (let i = 1; i <= 10; i++) {
+//     console.log(num);
+//     num++;
+// }
+
+// for (let i = 1; i <= 10; i++) {
+//     if (i == 6) {
+//         // break;
+//         continue;
+//     }
+//     console.log(i);
+// }
