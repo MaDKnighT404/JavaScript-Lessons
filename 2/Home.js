@@ -8,22 +8,32 @@ const personalMovieDB = {
     privat: false
 };
 
+if (personalMovieDB.count >= 1 && personalMovieDB.count < 10) {
+    console.log('Просмотренно довольно маль фильмов');
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+    console.log ('Вы классический зритель');
+} else if (personalMovieDB.count >=30) {
+    console.log ('Вы киноман!');
+} else {
+    console.log ('Вы вообще ничего не смотрели?');
+}
 
-// for (let i = 0; i < 2; i++) {
-//     const lastWathingFilm = prompt("Один из последних просмотренных фильмов?","");
-//     const raitOfFilm = +prompt("Насколько оцените его?","");
-//     if (lastWathingFilm != '' && lastWathingFilm != null && lastWathingFilm.length <10 &&
-//         raitOfFilm != '' && raitOfFilm != null) {
-//         personalMovieDB.movies[lastWathingFilm] = raitOfFilm;
-//         console.log('done');
-//     } else {
-//         console.log('error')
-//         i--;
-//     }
-// }
-// console.log(personalMovieDB);
+for (let i = 0; i < 2; i++) {
+    const lastWathingFilm = prompt("Один из последних просмотренных фильмов?","");
+    const raitOfFilm = +prompt("Насколько оцените его?","");
+    if (lastWathingFilm != '' && lastWathingFilm != null && lastWathingFilm.length <10 &&
+        raitOfFilm != '' && raitOfFilm != null) {
+        personalMovieDB.movies[lastWathingFilm] = raitOfFilm;
+        console.log('done');
+    } else {
+        console.log('error')
+        i--;
+    }
+}
+console.log(personalMovieDB);
 
 
+// два других варианта циклов
 
 // let i = 0;
 
@@ -56,38 +66,6 @@ const personalMovieDB = {
 
 
 
-
-
-
-
-
-
-
-
-// for (let i = 0; i < 2; i++) {
-//     const lastWatchingFilm = prompt('Один из последних просмотренных фильмов?','');
-//     const raitOfFilm = prompt('Насколько цените его?','');
-//     if (lastWatchingFilm != '' && lastWatchingFilm != null && lastWatchingFilm.length < 10 &&
-//         raitOfFilm != '' && raitOfFilm != null) {
-//         personalMovieDB.movies[lastWatchingFilm] = raitOfFilm;
-//         console.log('done');
-//     } else {
-//         console.log('error');
-//         i--;
-//     }
-// }
-//  console.log(personalMovieDB); 
-
-
-
-
-//  if (personalMovieDB.count > 0 && personalMovieDB.count < 10) {
-//      console.log('Просмотрено мало фильмов');
-// } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30 ) {
-//     console.log('Вы класический зритель');
-// } else if (personalMovieDB.count >= 30){
-//     console.log('Вы киноман');
-// } else {console.log('ошибка');}
 
 
 
