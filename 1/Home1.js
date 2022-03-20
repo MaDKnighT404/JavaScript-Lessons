@@ -50,3 +50,13 @@ const personalMovieDB = {
     privat: false
 };
 
+const lastWathingFilm1 = prompt("Один из последних просмотренных фильмов?","");
+const raitOfFilm1 = +prompt("Насколько оцените его?","");
+
+const lastWathingFilm2 = prompt("Один из последних просмотренных фильмов?","");
+const raitOfFilm2 = +prompt("Насколько оцените его?","");
+
+personalMovieDB.movies[lastWathingFilm1] = raitOfFilm1;
+personalMovieDB.movies[lastWathingFilm2] = raitOfFilm2;
+
+console.log(personalMovieDB);
