@@ -8,22 +8,20 @@ const personalMovieDB = {
     privat: false
 };
 
-// const lastWathingFilm1 = prompt("Один из последних просмотренных фильмов?","");
-// const raitOfFilm1 = +prompt("Насколько оцените его?","");
 
-// const lastWathingFilm2 = prompt("Один из последних просмотренных фильмов?","");
-// const raitOfFilm2 = +prompt("Насколько оцените его?","");
-
-// personalMovieDB.movies[lastWathingFilm1] = raitOfFilm1;
-// personalMovieDB.movies[lastWathingFilm2] = raitOfFilm2;
-
-
-
-for (let i = 0; i < 2; i++) {
-    const lastWathingFilm = prompt("Один из последних просмотренных фильмов?","");
-    const raitOfFilm = +prompt("Насколько оцените его?","");
-    personalMovieDB.movies[lastWathingFilm] = raitOfFilm;
-}
+// for (let i = 0; i < 2; i++) {
+//     const lastWathingFilm = prompt("Один из последних просмотренных фильмов?","");
+//     const raitOfFilm = +prompt("Насколько оцените его?","");
+//     if (lastWathingFilm != '' && lastWathingFilm != null && lastWathingFilm.length <10 &&
+//         raitOfFilm != '' && raitOfFilm != null) {
+//         personalMovieDB.movies[lastWathingFilm] = raitOfFilm;
+//         console.log('done');
+//     } else {
+//         console.log('error')
+//         i--;
+//     }
+// }
+// console.log(personalMovieDB);
 
 
 
@@ -45,7 +43,6 @@ for (let i = 0; i < 2; i++) {
 // }
 // while (i<2);
 
-console.log(personalMovieDB);
 
 
 
@@ -66,19 +63,20 @@ console.log(personalMovieDB);
 
 
 
-// // for (let i = 0; i < 2; i++) {
-// //     const lastWatchingFilm = prompt('Один из последних просмотренных фильмов?','');
-// //     const raitOfFilm = prompt('Насколько цените его?','');
-// //     if (lastWatchingFilm != '' && lastWatchingFilm != null && lastWatchingFilm.length < 10 &&
-// //         raitOfFilm != '' && raitOfFilm != null) {
-// //         personalMovieDB.movies[lastWatchingFilm] = raitOfFilm;
-// //         console.log('done');
-// //     } else {
-// //         console.log('error');
-// //         i--;
-// //     }
-// // }
-// //  console.log(personalMovieDB); 
+
+// for (let i = 0; i < 2; i++) {
+//     const lastWatchingFilm = prompt('Один из последних просмотренных фильмов?','');
+//     const raitOfFilm = prompt('Насколько цените его?','');
+//     if (lastWatchingFilm != '' && lastWatchingFilm != null && lastWatchingFilm.length < 10 &&
+//         raitOfFilm != '' && raitOfFilm != null) {
+//         personalMovieDB.movies[lastWatchingFilm] = raitOfFilm;
+//         console.log('done');
+//     } else {
+//         console.log('error');
+//         i--;
+//     }
+// }
+//  console.log(personalMovieDB); 
 
 
 
