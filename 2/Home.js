@@ -1,36 +1,38 @@
-const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+// const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
 
-if (personalMovieDB.count >= 1 && personalMovieDB.count < 10) {
-    console.log('Просмотренно довольно маль фильмов');
-} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
-    console.log ('Вы классический зритель');
-} else if (personalMovieDB.count >=30) {
-    console.log ('Вы киноман!');
-} else {
-    console.log ('Вы вообще ничего не смотрели?');
-}
+// if (personalMovieDB.count >= 1 && personalMovieDB.count < 10) {
+//     console.log('Просмотренно довольно маль фильмов');
+// } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+//     console.log ('Вы классический зритель');
+// } else if (personalMovieDB.count >=30) {
+//     console.log ('Вы киноман!');
+// } else {
+//     console.log ('Вы вообще ничего не смотрели?');
+// }
 
-for (let i = 0; i < 2; i++) {
-    const lastWathingFilm = prompt("Один из последних просмотренных фильмов?","");
-    const raitOfFilm = +prompt("Насколько оцените его?","");
-    if (lastWathingFilm != '' && lastWathingFilm != null && lastWathingFilm.length <10 &&
-        raitOfFilm != '' && raitOfFilm != null) {
-        personalMovieDB.movies[lastWathingFilm] = raitOfFilm;
-        console.log('done');
-    } else {
-        console.log('error')
-        i--;
-    }
-}
-console.log(personalMovieDB);
+// for (let i = 0; i < 2; i++) {
+//     const lastWathingFilm = prompt("Один из последних просмотренных фильмов?","");
+//     const raitOfFilm = +prompt("Насколько оцените его?","");
+//     if (lastWathingFilm != '' && lastWathingFilm != null && lastWathingFilm.length <10 &&
+//         raitOfFilm != '' && raitOfFilm != null) {
+//         personalMovieDB.movies[lastWathingFilm] = raitOfFilm;
+//         console.log('done');
+//     } else {
+//         console.log('error')
+//         i--;
+//     }
+// }
+// console.log(personalMovieDB);
+
+
 
 
 // два других варианта циклов
@@ -148,6 +150,21 @@ console.log(personalMovieDB);
 
 
 
+
+// функции
+
+// let num = 20
+
+// function showFirstMessage(text) {
+//     console.log('text');
+//     let num = 26;   //если убрать let, то будет другой результат
+//     console.log(num);
+// }
+
+// showFirstMessage('Hello!')
+// console.log(num);
+
+
 // function getlog (a, b, c) {
 //     console.log(a);
 //     console.log(b);
@@ -155,10 +172,10 @@ console.log(personalMovieDB);
 //     c = 15;
 //     console.log(c + 5 + d);
 //     console.log(d);
+//     return console.log(a+b+c+d);
 // }
-// let d = 35;
+// const d = 35;
 // getlog(5,6);
-
 
 
 // const myName = 'geORge'.toUpperCase();
@@ -171,18 +188,36 @@ console.log(personalMovieDB);
 // const city = 'Sochi is the best city in the world!!!';
 // console.log(city.indexOf('best'));
 
+// let city = 'Sochi is the best';
+// if (city.indexOf('q') == -1) {     // Если такого символа нет в строке, то результат равен -1
+//     city = 'Moscow';
+// }
+// console.log(city);
+
+
 
 // const greetings = 'Hello beautiful World!';
 
-// console.log(greetings.slice(6,17));
-// console.log(greetings.substring(17,6));
+// console.log(greetings.slice(6,15));   // вырезает из строки текст. Два аргумента. Начало и конец. Отчет символовом с нуля!. 
+// //                                       Последний аргумент - не включает тот символ, т.е надо делать +1 
+// console.log(greetings.slice(6));   // Если аргумент один - то начиная с него и до конца всё вырежется. 
+// console.log(greetings.slice(-7, -1));  // Можно использовать отрицательные значения. Тогда отчет справо будет и начинается с 1!
+
 
 // const greetings = 'Hello beautiful World!';
-// console.log(greetings.substr(6, 9));
+// console.log(greetings.substring(17,9));  // тоже самое, что и slice. Только не поддерживает отрицательные числа и 
+//                                             первый аргумент может быть больше второго 
 
-// console.log(Math.round(12.4441));
-// console.log(parseInt('15 12 13'));
-// console.log(parseFloat('15/12 13.13'));
+
+// const greetings = 'Hello beautiful World!';
+// console.log(greetings.substr(6, 9));   // Первый аргумент - начала вырезания, второй - сколько символом отрезать после него. 
+
+
+
+
+// console.log(Math.round(12.4441));   // Округляет число до целового. 
+// console.log(parseInt('15.01 12 13'));  // Можно перевести строку в число и округлить.
+// console.log(parseFloat('15/12 13.13'));  // Можно перевести строку в число даже с дробной частью.
 
 
 
