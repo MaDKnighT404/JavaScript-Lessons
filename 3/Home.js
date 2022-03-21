@@ -1,72 +1,76 @@
-let numberOfFilms;
+// let numberOfFilms;
 
-function start() {
-    numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+// function start() {
+//     numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
 
-    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms) ) {    // проверяет аргумент и если это не число - возвращает true
-        numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
-    }
-}
-start();
-
-
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
+//     while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms) ) {    // проверяет аргумент и если это не число - возвращает true
+//         numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+//     }
+// }
+// start();
 
 
-function rememberMyFilms() {
-    for (let i = 0; i < 2; i++) {
-        const lastWathingFilm = prompt("Один из последних просмотренных фильмов?","");
-        const raitOfFilm = +prompt("Насколько оцените его?","");
-        if (lastWathingFilm != '' && lastWathingFilm != null && lastWathingFilm.length <10 &&
-            raitOfFilm != '' && raitOfFilm != null) {
-            personalMovieDB.movies[lastWathingFilm] = raitOfFilm;
-            console.log('done');
-        } else {
-            console.log('error')
-            i--;
-        }
-    }
-
-}
-rememberMyFilms();
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
 
 
-function detectPersonalLevel() {
-    if (personalMovieDB.count >= 1 && personalMovieDB.count < 10) {
-        console.log('Просмотренно довольно маль фильмов');
-    } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
-        console.log ('Вы классический зритель');
-    } else if (personalMovieDB.count >=30) {
-        console.log ('Вы киноман!');
-    } else {
-        console.log ('Вы вообще ничего не смотрели?');
-    }
-}
-detectPersonalLevel();
+// function rememberMyFilms() {
+//     for (let i = 0; i < 2; i++) {
+//         const lastWathingFilm = prompt("Один из последних просмотренных фильмов?","");
+//         const raitOfFilm = +prompt("Насколько оцените его?","");
+//         if (lastWathingFilm != '' && lastWathingFilm != null && lastWathingFilm.length <10 &&
+//             raitOfFilm != '' && raitOfFilm != null) {
+//             personalMovieDB.movies[lastWathingFilm] = raitOfFilm;
+//             console.log('done');
+//         } else {
+//             console.log('error')
+//             i--;
+//         }
+//     }
+
+// }
+// rememberMyFilms();
 
 
-function ShowMyDB () {
-    if (personalMovieDB.privat == false) {
-        console.log(personalMovieDB);
-    }
-}
-ShowMyDB ();
+// function detectPersonalLevel() {
+//     if (personalMovieDB.count >= 1 && personalMovieDB.count < 10) {
+//         console.log('Просмотренно довольно маль фильмов');
+//     } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+//         console.log ('Вы классический зритель');
+//     } else if (personalMovieDB.count >=30) {
+//         console.log ('Вы киноман!');
+//     } else {
+//         console.log ('Вы вообще ничего не смотрели?');
+//     }
+// }
+// detectPersonalLevel();
 
 
-function writeYourGenres() {
-    for (let i = 1; i <= 3; i++) {
-        const favoriteGenres = prompt(`Ваш любимый жанр под номером ${i}`);
-        personalMovieDB.genres[i - 1] = favoriteGenres;
-       // personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);   // Можно вместо 64-65 оставить только 66
-    }
-}
-writeYourGenres();
+// function ShowMyDB () {
+//     if (personalMovieDB.privat == false) {
+//         console.log(personalMovieDB);
+//     }
+// }
+// ShowMyDB ();
+
+
+// function writeYourGenres() {
+//     for (let i = 1; i <= 3; i++) {
+//         const favoriteGenres = prompt(`Ваш любимый жанр под номером ${i}`);
+//         personalMovieDB.genres[i - 1] = favoriteGenres;
+//        // personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);   // Можно вместо 64-65 оставить только 66
+//     }
+// }
+// writeYourGenres();
+
+
+
+
 
 
 
@@ -214,6 +218,36 @@ writeYourGenres();
 // getlog(5,6);
 
 
+// колбек функции
+
+//первый способ
+
+// function learnJS(lang, callback) {
+//     console.log (`Я учу: ${lang}`);
+//     callback();
+// }
+
+// learnJS('JavaScript', function() {
+//      console.log('Я прошёл этот урок!');
+// });
+
+
+//второй способ
+
+// function learnJS(lang, callback) {
+//     console.log (`Я учу: ${lang}`);
+//     callback();
+// }
+
+// function done() {
+//     console.log('Я прошёл этот урок!');
+// }
+
+// learnJS('JavaScript', done);
+
+
+
+
 // const myName = 'geORge'.toUpperCase();
 // const myLowerName = myName.toLowerCase(); 
 // console.log(myName);
@@ -257,3 +291,48 @@ writeYourGenres();
 
 
 
+// Объекты 
+// перебор свойств. Создание метода для объекта. 
+
+const options = {
+    name: 'test',
+    width: 1024,
+    height: 1024,
+    colors: {
+        border: 'black',
+        background:'Red'
+    },
+    makeTest: function() {           // создание нового метода makeTest, который будет доступен для этого объкта.
+        console.log('test');
+    }
+};
+
+options.makeTest();  // Запускаем новый метод
+
+//деструктуризация объекта. 
+
+const {border,background} = options.colors; //Вытащить свойства из вложенного объекта в качестве отдельной переменной.
+console.log(border);  // теперь border - это переменная, которая содержит значение black
+
+
+
+
+// console.log(options);
+
+// delete options.colors.border;
+
+// console.log(options);
+
+for (let key in options) {             // для перебора свойств объекта. 
+    if (typeof(options[key]) === 'object') {   // для перебора вложенного объекта
+        for (let subKey in options[key] ) {    // создаем еще один перебор
+            console.log(`Свойство ${subKey} имеет значение ${options[key][subKey]}`);
+        }
+    } else {
+        console.log(`Свойство ${key} имеет значение ${options[key]}`);    // будем получает значение ключа, который перебирается в свойствах ${key}
+    }
+}
+
+console.log(Object.keys(options).length);  // создаём из объекта массив, в котором свойства объкта 
+//                                            занимают порядковый индекс в масиве. Если добавить length,
+//                                            то узнаем количество свойств в этом новом массиве
