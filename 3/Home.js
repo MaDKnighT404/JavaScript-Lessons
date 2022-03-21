@@ -48,10 +48,28 @@ function detectPersonalLevel() {
         console.log ('Вы вообще ничего не смотрели?');
     }
 }
-
 detectPersonalLevel();
 
-console.log(personalMovieDB);
+
+function ShowMyDB () {
+    if (personalMovieDB.privat == false) {
+        console.log(personalMovieDB);
+    }
+}
+ShowMyDB ();
+
+
+function writeYourGenres() {
+    for (let i = 1; i <= 3; i++) {
+        const favoriteGenres = prompt(`Ваш любимый жанр под номером ${i}`);
+        personalMovieDB.genres[i - 1] = favoriteGenres;
+       // personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);   // Можно вместо 64-65 оставить только 66
+    }
+}
+writeYourGenres();
+
+
+
 
 // два других варианта циклов
 
