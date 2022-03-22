@@ -400,3 +400,142 @@
 // function compareNum (a, b) {
 //     return a - b;
 // } 
+
+
+
+
+// мутации объектов
+
+// const obj = {
+//     a: 5,
+//     b: 1
+// };
+
+// const copy = obj;
+
+// copy.a = 10;
+// console.log(copy);
+// console.log(obj);  // значение свойства a измениться, потому что мы копируеме не объект, а ссылку на него.
+
+// как копировать объекты правильно?
+
+// первый способ с помощью цикла for in
+// function copy(mainObj) {
+//     let objCopy ={};
+//     for (let key in mainObj) {
+//          objCopy[key] = mainObj[key];
+//     }
+//     return objCopy;
+// }
+
+// const numbers = {
+//     a: 11,
+//     b: 5,
+//     c: {
+//         x:9,
+//         y:3
+//     }
+// };
+
+// const newNumbers = copy(numbers);  // Поверхностная копия ( без вложенных объектов )
+// newNumbers.b = 33;
+// newNumbers.c.x = 15;  // !!!Для вложенных обеъктов поменяется значение и оригинального!!!
+
+// console.log(numbers);
+// console.log(newNumbers);
+
+
+// второй способ с помощью obj.assign. Позволяет соеденять объекты. Тоже поверхностаная копия. Не глубокая
+
+// const numbers = {
+//     a: 11,
+//     b: 5,
+//     c: {
+//         x:9,
+//         y:3
+//     }
+// };
+
+// const numbers2 = {
+//     d: 25,
+//     e: 33,
+//     f: {
+//         m: 6,
+//         n: 44
+//     }
+// };
+
+// Object.assign (numbers, numbers2); // Первый аргумент - объект куда помещается второй объкт из второго аргумента. 
+
+// console.log(numbers);
+
+// // а чтобы скопировать объект можно первый аргумент указать в качестве пустого объекта.
+
+// const numbers3 = Object.assign ({}, numbers2);
+// numbers3.e = 'Good';
+// numbers3.f.m = 'hello'; // так же мутирует основной объект.
+
+// console.log(numbers2);
+// console.log(numbers3);
+
+
+
+// Копии массивов. Можно воспользоваться циклами, но есть специальный метод для этого.
+
+// const oldArray = ['a', 'b', 'c'];
+// const newArray = oldArray.slice();  // без метода slice создаться только ссылка на массив.
+// newArray[3] = 5;
+// console.log(oldArray);
+// console.log(newArray);
+
+
+// Создание копий с помощью оператора spread ( оператор разворота, появился в ES8). Работает и для объектов
+
+// для массивов
+// const oldArray = ['a', 'b', 'c'];
+// const newArray = [...oldArray];
+// newArray[3] = 5;
+// console.log(oldArray);
+// console.log(newArray);
+
+// // для объектов
+
+// const obj = {
+//     one: 1,
+//     two: 2,
+//     three: {
+//         nine: 9,
+//         ten: 10
+//     }
+// };
+
+// const newObj = {...obj};
+// newObj.three.nine = 55;   // тоже поверхностная копия.
+
+// console.log(obj);
+// console.log(newObj);
+
+
+
+// // что еще можно делать с помощью spread оператора?
+
+
+// const fruits = ['apple', 'orange', 'banana'];
+// const vegetables = ['carrot', 'tomato', 'onion'];
+// const food = [...fruits, ...vegetables,  'bread', 'milk'];//троеточие - это spread оператор, который перенесет все свойства массива
+
+// console.log(food);
+
+
+
+
+// function data(a, b, c) {   // Можно с помощью spread оператора разложить массив на свойства и отправить их в функцию в качестве аргументов
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
+
+// const num = [1, 7, 15];
+
+// data(...num);
+
