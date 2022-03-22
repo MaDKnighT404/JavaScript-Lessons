@@ -579,10 +579,10 @@
 
 // так делаем когда хотим создавать новые объекты из прототипа. 
 
-const soldier = {
-    health: 300,
-    armor: 200
-};
+// const soldier = {
+//     health: 300,
+//     armor: 200
+// };
 
-const soldierJohn = Object.create(soldier);  // создаем новый объект soldierJohn, который будет прототипно наследоваться от soldier
-console.log(soldierJohn.armor);
+// const soldierJohn = Object.create(soldier);  // создаем новый объект soldierJohn, который будет прототипно наследоваться от soldier
+// console.log(soldierJohn.armor);
