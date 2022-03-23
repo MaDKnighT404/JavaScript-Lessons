@@ -1,76 +1,72 @@
-const personalMovieDB = {
-    count: 0,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: true,
-    start: function() {
-        while (personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count) ) {    // проверяет аргумент и если это не число - возвращает true
-            personalMovieDB.count = +prompt("Сколько фильмов вы уже посмотрели?", "");
-        }
-    },
-    rememberMyFilms: function() {
-        for (let i = 0; i < 2; i++) {
-            const lastWathingFilm = prompt("Один из последних просмотренных фильмов?","");
-            const raitOfFilm = +prompt("Насколько оцените его?","");
-            if (lastWathingFilm != '' && lastWathingFilm != null && lastWathingFilm.length <10 &&
-                raitOfFilm != '' && raitOfFilm != null) {
-                personalMovieDB.movies[lastWathingFilm] = raitOfFilm;
-            } else {
-                i--;
-            }
-        }
-    },
-    detectPersonalLevel: function() {
-        if (personalMovieDB.count >= 1 && personalMovieDB.count < 10) {
-            console.log('Просмотренно довольно маль фильмов');
-        } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
-            console.log ('Вы классический зритель');
-        } else if (personalMovieDB.count >=30) {
-            console.log ('Вы киноман!');
-        } else {
-            console.log ('Вы вообще ничего не смотрели?');
-        }
-    },
-    ShowMyDB: function () {
-        if (personalMovieDB.privat == false) {
-            console.log(personalMovieDB);
-        }
-    },
-    toggleVisibleMyDB: function() {
-        if (personalMovieDB.privat) {
-            personalMovieDB.privat = false;
-        } else {
-            personalMovieDB.privat = true;
-        }
-    },
-    writeYourGenres: function() {
-        for (let i = 1; i <= 3; i++) {
-            const favoriteGenres = prompt(`Ваш любимый жанр под номером ${i}`);
-            personalMovieDB.genres[i - 1] = favoriteGenres;
-            if (favoriteGenres == '' || favoriteGenres == null) {
-                i--;
-            } else {
-                personalMovieDB.genres[i - 1] = favoriteGenres;
-            }
-        }
-        personalMovieDB.genres.forEach((item, i) => {
-            console.log(`Любимый жанр №${i + 1} - это ${item}`);
-        });
-    }
-};
+// const personalMovieDB = {
+//     count: 0,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: true,
+//     start: function() {
+//         while (personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count) ) {    
+//     //проверяет аргумент и если это не число - возвращает true
+//             personalMovieDB.count = +prompt("Сколько фильмов вы уже посмотрели?", "");
+//         }
+//     },
+//     rememberMyFilms: function() {
+//         for (let i = 0; i < 2; i++) {
+//             const lastWathingFilm = prompt("Один из последних просмотренных фильмов?","");
+//             const raitOfFilm = +prompt("Насколько оцените его?","");
+//             if (lastWathingFilm != '' && lastWathingFilm != null && lastWathingFilm.length <10 &&
+//                 raitOfFilm != '' && raitOfFilm != null) {
+//                 personalMovieDB.movies[lastWathingFilm] = raitOfFilm;
+//             } else {
+//                 i--;
+//             }
+//         }
+//     },
+//     detectPersonalLevel: function() {
+//         if (personalMovieDB.count >= 1 && personalMovieDB.count < 10) {
+//             console.log('Просмотренно довольно маль фильмов');
+//         } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+//             console.log ('Вы классический зритель');
+//         } else if (personalMovieDB.count >=30) {
+//             console.log ('Вы киноман!');
+//         } else {
+//             console.log ('Вы вообще ничего не смотрели?');
+//         }
+//     },
+//     ShowMyDB: function () {
+//         if (personalMovieDB.privat == false) {
+//             console.log(personalMovieDB);
+//         }
+//     },
+//     toggleVisibleMyDB: function() {
+//         if (personalMovieDB.privat) {
+//             personalMovieDB.privat = false;
+//         } else {
+//             personalMovieDB.privat = true;
+//         }
+//     },
+//     writeYourGenres: function() {
+//         for (let i = 1; i <= 3; i++) {
+//             const favoriteGenres = prompt(`Ваш любимый жанр под номером ${i}`);
+//             personalMovieDB.genres[i - 1] = favoriteGenres;
+//             if (favoriteGenres == '' || favoriteGenres == null) {
+//                 i--;
+//             } else {
+//                 personalMovieDB.genres[i - 1] = favoriteGenres;
+//             }
+//         }
+//         personalMovieDB.genres.forEach((item, i) => {
+//             console.log(`Любимый жанр №${i + 1} - это ${item}`);
+//         });
+//     }
+// };
 
-personalMovieDB.start();
-personalMovieDB.rememberMyFilms();
-personalMovieDB.detectPersonalLevel();
-personalMovieDB.toggleVisibleMyDB ();
-personalMovieDB.ShowMyDB ();
-personalMovieDB.writeYourGenres();
-console.log(personalMovieDB);
-
-
-
-
+// personalMovieDB.start();
+// personalMovieDB.rememberMyFilms();
+// personalMovieDB.detectPersonalLevel();
+// personalMovieDB.toggleVisibleMyDB ();
+// personalMovieDB.ShowMyDB ();
+// personalMovieDB.writeYourGenres();
 
 
 
@@ -118,16 +114,6 @@ console.log(personalMovieDB);
 // }
 // while (i<2);
 // console.log(personalMovieDB);
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -227,7 +213,7 @@ console.log(personalMovieDB);
 
 // колбек функции
 
-//первый способ
+// первый способ
 
 // function learnJS(lang, callback) {
 //     console.log (`Я учу: ${lang}`);
@@ -239,7 +225,7 @@ console.log(personalMovieDB);
 // });
 
 
-//второй способ
+// второй способ
 
 // function learnJS(lang, callback) {
 //     console.log (`Я учу: ${lang}`);
@@ -337,7 +323,8 @@ console.log(personalMovieDB);
 //             console.log(`Свойство ${subKey} имеет значение ${options[key][subKey]}`);
 //         }
 //     } else {
-//         console.log(`Свойство ${key} имеет значение ${options[key]}`);    // будем получает значение ключа, который перебирается в свойствах ${key}
+//         console.log(`Свойство ${key} имеет значение ${options[key]}`);    
+// будем получает значение ключа, который перебирается в свойствах ${key}
 //     }
 // }
 
@@ -348,16 +335,17 @@ console.log(personalMovieDB);
 
 
 
-//массивы
+// массивы
 
 // const arr = [1, 5, 6, 8, 15];
 
 // arr.pop();  // метод удаляет последний элемент массива.
 // arr.push('George', 25, []); // метод добавляет конкретные элементы в конец массива
-// arr.shift();    // !!!удаляет первый элемент массива. Редко используется потому что у всех последующих элементов меняется индекс
+// arr.shift();    // !!!удаляет первый элемент массива. 
+//Редко используется потому что у всех последующих элементов меняется индекс
 // arr.unshift(1555); //!!!добавляется в начало массива конекретный элемент. Редко используется как и shift
 
-//перебор массива
+// перебор массива
 
 // for (let i = 0; i < arr.length; i++) {   // !!!Можно с помощью for, но для массивов есть свои методы перебора!!!
 //     console.log (arr[i]);
@@ -529,15 +517,16 @@ console.log(personalMovieDB);
 
 // const fruits = ['apple', 'orange', 'banana'];
 // const vegetables = ['carrot', 'tomato', 'onion'];
-// const food = [...fruits, ...vegetables,  'bread', 'milk'];//троеточие - это spread оператор, который перенесет все свойства массива
+// const food = [...fruits, ...vegetables,  'bread', 'milk'];
+//троеточие - это spread оператор, который перенесет все свойства массива
 
 // console.log(food);
 
 
 
-
-// function data(a, b, c) {   // Можно с помощью spread оператора разложить массив на свойства и отправить их в функцию в качестве аргументов
+// Можно с помощью spread оператора разложить массив на свойства и отправить их в функцию в качестве аргументов
 //     console.log(a);
+// function data(a, b, c) {
 //     console.log(b);
 //     console.log(c);
 // }
@@ -549,7 +538,7 @@ console.log(personalMovieDB);
 
 // создание прототипов
 
-//старый и не используемый метод!
+// старый и не используемый метод!
 
 // const soldier = {
 //     health: 300,
@@ -578,7 +567,8 @@ console.log(personalMovieDB);
 //     health: 100
 // };
 
-// Object.setPrototypeOf(soldierJohn, soldier);  // первый аргумент тут - объект, которому будет назначен прототип, второй аргумент - используемый прототип
+// первый аргумент тут - объект, которому будет назначен прототип, второй аргумент - используемый прототип
+// Object.setPrototypeOf(soldierJohn, soldier);  
 
 // console.log(soldierJohn.armor);
 
@@ -591,5 +581,66 @@ console.log(personalMovieDB);
 //     armor: 200
 // };
 
-// const soldierJohn = Object.create(soldier);  // создаем новый объект soldierJohn, который будет прототипно наследоваться от soldier
+// создаем новый объект soldierJohn, который будет прототипно наследоваться от soldier
+
+// const soldierJohn = Object.create(soldier);  
 // console.log(soldierJohn.armor);
+
+
+
+
+// ДИНАМИЧЕСКАЯ ТИПИЗАЦИЯ.
+
+// Способы превращения одних данных в другие
+
+// превращаем данные в строку
+
+
+// 1) используем глобальный объект String  - старый способ
+
+// console.log(typeof(String(129730)));  // если убрать typeof будет строка '129730'
+
+// 2) Конкатенация. Когда что-то складываем со строкой. В результате получаем строковое значение
+
+// console.log(typeof(5 +''));  // тоже получаем строковое значение "5"
+// console.log(typeof(null +''));  // тоже получаем строковое значение "null"
+
+// const fontSize = 32 + 'px'; // результат "32px"
+
+
+
+// превращаем значение в число
+// 1) используем глобальный объект Number - старый способ
+
+// console.log(typeof(Number('129730')));  // если убрать typeof будет числовое значение 129730
+
+// // 2) Унарный плюс
+// console.log(typeof(+'129730')); // добавить плюс перед значением
+
+// // 3) parseInt
+// console.log(typeof(parseInt('15px', 10)));  // Первый аргумент - значение. Второй аргумент - система исчисления. 
+
+
+// превращаем в булиновое значение
+
+// 1) используем глобальный объект Boolean  - устаревший способ
+
+// console.log(typeof(Boolean(129730))); 
+
+
+// 2) Нативный способ 
+// null, 0, '', undefined, NaN - всегда превращаются в false. Всё остальное будет true. Даже пустые массивы
+
+// let switcher = null;
+// if (switcher) {
+//     console.log('Yes'); // работать не будет, потому что null преобразуется в false
+// } 
+
+// let switcher = 1;
+// if (switcher) {
+//     console.log('Yes'); // работать будет, потому что null преобразуется в true
+// } 
+
+// 3) Поставить два знака отрицания !!
+
+console.log(typeof(!!123)); 

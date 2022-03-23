@@ -66,7 +66,6 @@ personalMovieDB.detectPersonalLevel();
 personalMovieDB.toggleVisibleMyDB ();
 personalMovieDB.ShowMyDB ();
 personalMovieDB.writeYourGenres();
-console.log(personalMovieDB);
 
 
 
