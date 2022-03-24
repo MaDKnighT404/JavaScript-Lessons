@@ -15,7 +15,7 @@ const oneHeart = document.querySelector('.heart');
 // box.style.width = '500px';  // тоже самое. Указываем точное значение с единицами измерения. 
 
 // для того, чтобы добавить несколько значений используем cssText
-// box.style.cssText = 'background-color: #fab; width: 500px';
+// box.style.cssText = 'background-color: #fab; width: 500px'; // свойство и значение в виде строки. Такое же как и в CSS
 
 // можно вместо значений указать переменную:
 // const num = 500;
@@ -26,12 +26,11 @@ const oneHeart = document.querySelector('.heart');
 // buttons[2].style.borderRadius = '100%';
 
 
-
-
-
 // ничего не произойдет, потому что мы обращаемся к псевдомассиву, а не конкретному элементу
 // нужно обязательно указывать индекс из этого массива для нужного элемента:
 // circles.style.backgroundColor = 'red'; 
+
+
 
 // для того, чтобы обратится ко всем элементам из массива:
 // используем цикл, for off или forEach
@@ -64,6 +63,7 @@ const oneHeart = document.querySelector('.heart');
 // hearts[2].after(newDiv); // добавляем наш див после третьего элементом в псевдомассиве hearts
 
 // circles[1].remove();  // удаляет второй элемент из псевдомассива.
+
 
 // hearts[1].replaceWith(circles[1]);  // поменять местами два элемента
 
