@@ -1,5 +1,6 @@
 
 // способ редко используется!!!
+
 // const btn = document.querySelector('#btn');  // к конкретному элементу можно обратится по id
 // const btn = document.querySelector('button');   // к первому элементу с тэгом button
 // const btn = document.querySelectorAll('button'); // создать массив из всех элементом с тэгом button
@@ -106,7 +107,7 @@
 
 
 
-// ЕЩЁ СУПЕР ВАЖНО: у псевдомассивов нет метода addEventListener !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// ЕЩЁ СУПЕР ВАЖНО: Обработчик событий можно назначить только элементам! у псевдомассивов нет метода addEventListener !!!!!!!!!!!!
 // т.е. если мы его получаем с помощью querySelectorAll - , то метода addEventListener у него нет!!!
 // поэтому надо все элементы перебрать ( с помощью forEach) и навесить на каждый из них addEventListener
 
